@@ -12,7 +12,5 @@ router.route('/campaigns')
 router.route('/campaigns/:id')
     .delete(auth, authAdmin, campaignCtrl.deleteCampaign)
     .put(auth, authAdmin, campaignCtrl.updateCampaign)
-
-
-
+    
 module.exports = router

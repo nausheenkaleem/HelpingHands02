@@ -28,8 +28,6 @@ export const DataProvider = ({children}) =>{
         }
     },[])
 
-
-    
     const state = {
         token: [token, setToken],
         campaignsAPI: CampaignsAPI(),
