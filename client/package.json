@@ -23,7 +23,7 @@
     "extends": "react-app"
   },
   "browserslist": {
-    "campaignion": [
+    "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
