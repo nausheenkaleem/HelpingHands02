@@ -1,7 +1,7 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {GlobalState} from '../../../GlobalState'
 import axios from 'axios'
-import PaypalButton from './PaypalButton'
+import DonateButton from './DonateButton'
 
 function Cart() {
     const state = useContext(GlobalState)
@@ -111,7 +111,7 @@ function Cart() {
 
             <div className="total">
                 <h3>Total: $ {total}</h3>
-                <PaypalButton
+                <DonateButton
                 total={total}
                 tranSuccess={tranSuccess} />
             </div>
