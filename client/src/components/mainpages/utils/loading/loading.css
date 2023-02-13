@@ -2,24 +2,21 @@
     background: #fff;
     overflow: hidden;
 }
-.loader{
-    width: 300px;
-    height: 300px;
-    margin: auto;
-}
-.loader div{
-    width: calc(100% - 15px);
-    height: calc(100% - 15px);
-    border: 2px solid #fff;
-    border-top: 2px solid crimson;
-    border-radius: 50%;
-    animation: rotate 10s linear infinite alternate-reverse;
-}
-@keyframes rotate{
-    50%{
-        transform: rotate(80deg);
+
+  .loader {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-top: 5px solid #292929;
+    border-right: 5px solid #efefef;
+    border-bottom: 5px solid #efefef;
+    border-left: 5px solid #efefef;
+    border-radius: 100px;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
     }
-    100%{
-        transform: rotate(360deg);
-    }
-}
+  }

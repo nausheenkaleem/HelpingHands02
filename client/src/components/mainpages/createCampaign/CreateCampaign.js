@@ -59,7 +59,7 @@ function CreateCampaign() {
             if(file.size > 1024 * 1024) // 1mb
                 return alert("Size too large!")
 
-            if(file.type !== 'image/jpeg' && file.type !== 'image/png') // 1mb
+            if(file.type !== 'image/jpeg' && file.type !== 'image/png') 
                 return alert("File format is incorrect.")
 
             let formData = new FormData()
