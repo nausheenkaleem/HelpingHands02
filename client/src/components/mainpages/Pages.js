@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 import Campaigns from './campaigns/Campaigns'
 import DetailCampaign from './detailCampaign/DetailCampaign'
 import Login from './auth/Login'
-import Register from './auth/Register'
+import DonorRegister from './auth/DonorRegister'
 import OrderHistory from './history/OrderHistory'
 import OrderDetails from './history/OrderDetails'
 import Cart from './cart/Cart'
@@ -26,7 +26,7 @@ function Pages() {
             <Route path="/detail/:id" exact component={DetailCampaign} />
 
             <Route path="/login" exact component={isLogged ? NotFound : Login} />
-            <Route path="/register" exact component={isLogged ? NotFound : Register} />
+            <Route path="/donorRegister" exact component={isLogged ? NotFound : DonorRegister} />
 
             <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
             <Route path="/create_campaign" exact component={isAdmin ? CreateCampaign : NotFound} />
@@ -36,7 +36,6 @@ function Pages() {
             <Route path="/history/:id" exact component={isLogged ? OrderDetails : NotFound} />
 
             <Route path="/cart" exact component={Cart} />
-
 
             <Route path="*" exact component={NotFound} />
         </Switch>

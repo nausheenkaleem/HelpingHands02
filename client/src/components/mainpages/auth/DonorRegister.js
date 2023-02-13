@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 
-function Register() {
+function DonorRegister() {
     const [user, setUser] = useState({
         name:'', email:'', password: ''
     })
@@ -15,7 +15,7 @@ function Register() {
     const registerSubmit = async e =>{
         e.preventDefault()
         try {
-            await axios.post('/user/register', {...user})
+            await axios.post('/user/donorRegister', {...user})
 
             localStorage.setItem('firstLogin', true)
 
@@ -48,4 +48,4 @@ function Register() {
     )
 }
 
-export default Register
+export default DonorRegister
