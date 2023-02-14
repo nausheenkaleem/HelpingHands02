@@ -10,7 +10,7 @@ function Header() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
     const [isAdmin] = state.userAPI.isAdmin
-    const [cart] = state.userAPI.cart
+    // const [cart] = state.userAPI.cart
     const [menu, setMenu] = useState(false)
 
     const logoutUser = async () =>{
@@ -57,7 +57,7 @@ function Header() {
             </div>
 
             <ul style={styleMenu}>
-                <li><Link to="/">{isAdmin ? 'Campaigns' : 'Shop'}</Link></li>
+                <li><Link to="/">{isAdmin ? 'Campaigns' : 'BROWSE'}</Link></li>
 
                 {isAdmin && adminRouter()}
 
@@ -71,7 +71,7 @@ function Header() {
 
             </ul>
 
-            {
+            {/* {
                 isAdmin ? '' 
                 :<div className="cart-icon">
                     <span>{cart.length}</span>
@@ -79,7 +79,7 @@ function Header() {
                         <img src={Cart} alt="" width="30" />
                     </Link>
                 </div>
-            }
+            } */}
             
         </header>
     )

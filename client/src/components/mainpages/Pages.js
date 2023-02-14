@@ -35,7 +35,7 @@ function Pages() {
             <Route path="/history" exact component={isLogged ? OrderHistory : NotFound} />
             <Route path="/history/:id" exact component={isLogged ? OrderDetails : NotFound} />
 
-            <Route path="/cart" exact component={Cart} />
+            {/* <Route path="/cart" exact component={Cart} /> */}
 
             <Route path="*" exact component={NotFound} />
         </Switch>
