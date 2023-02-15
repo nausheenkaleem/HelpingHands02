@@ -1,3 +1,12 @@
 # HelpingHands02
 2nd repository since the first one faced trouble pushing commits. For now this repository consists of auth module and APIS and a general interface for all our features. <br />
-Imitating an ecommerce website has given a better understanding as to how we can provide the functionalities in a better way.
+
+the variables have already been created yall just need to edit the .env file, thanks
+
+**To connect mongo**  <br />
+Create a db in mongodb atlas  <br />
+Copy the connection string and paste in .env file <br />
+
+**To connect to cloudinary** <br />
+go to https://cloudinary.com/  <br />
+Create an account and paste your credentials in .env file <br />
