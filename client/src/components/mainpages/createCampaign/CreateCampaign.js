@@ -8,8 +8,8 @@ const initialState = {
     campaign_id: '',
     title: '',
     price: 0,
-    description: 'How to and tutorial videos of cool CSS effect, Web Design ideas,JavaScript libraries, Node.',
-    content: 'Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.',
+    description: 'Add a description for your campaign',
+    content: 'Enter all the details regarding your case',
     category: '',
     _id: ''
 }
@@ -25,7 +25,7 @@ function CreateCampaign() {
     const [isAdmin] = state.userAPI.isAdmin
     const [token] = state.token
 
-    const history = useHistory()
+    const dashboard = useHistory()
     const param = useParams()
 
     const [campaigns] = state.campaignsAPI.campaigns
@@ -112,7 +112,7 @@ function CreateCampaign() {
                 })
             }
             setCallback(!callback)
-            history.push("/")
+            dashboard.push("/")
         } catch (err) {
             alert(err.response.data.msg)
         }

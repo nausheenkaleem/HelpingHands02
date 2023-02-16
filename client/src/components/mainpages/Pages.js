@@ -4,8 +4,8 @@ import Campaigns from './campaigns/Campaigns'
 import DetailCampaign from './detailCampaign/DetailCampaign'
 import Login from './auth/Login'
 import DonorRegister from './auth/DonorRegister'
-import OrderHistory from './history/OrderHistory'
-import OrderDetails from './history/OrderDetails'
+import OrderHistory from './dashboard/OrderHistory'
+import OrderDetails from './dashboard/OrderDetails'
 import Cart from './cart/Cart'
 import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
@@ -32,10 +32,10 @@ function Pages() {
             <Route path="/create_campaign" exact component={isAdmin ? CreateCampaign : NotFound} />
             <Route path="/edit_campaign/:id" exact component={isAdmin ? CreateCampaign : NotFound} />
 
-            <Route path="/history" exact component={isLogged ? OrderHistory : NotFound} />
-            <Route path="/history/:id" exact component={isLogged ? OrderDetails : NotFound} />
+            <Route path="/dashboard" exact component={isLogged ? OrderHistory : NotFound} />
+            <Route path="/dashboard/:id" exact component={isLogged ? OrderDetails : NotFound} />
 
-            {/* <Route path="/cart" exact component={Cart} /> */}
+            <Route path="/cart" exact component={Cart} />
 
             <Route path="*" exact component={NotFound} />
         </Switch>

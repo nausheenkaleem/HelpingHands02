@@ -115,11 +115,11 @@ const userCtrl = {
             return res.status(500).json({msg: err.message})
         }
     },
-    history: async(req, res) =>{
+    dashboard: async(req, res) =>{
         try {
-            const history = await Payments.find({user_id: req.user.id})
+            const dashboard = await Payments.find({user_id: req.user.id})
 
-            res.json(history)
+            res.json(dashboard)
         } catch (err) {
             return res.status(500).json({msg: err.message})
         }

@@ -10,7 +10,7 @@ function Header() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
     const [isAdmin] = state.userAPI.isAdmin
-    // const [cart] = state.userAPI.cart
+    const [cart] = state.userAPI.cart
     const [menu, setMenu] = useState(false)
 
     const logoutUser = async () =>{
@@ -33,7 +33,7 @@ function Header() {
     const loggedRouter = () =>{
         return(
             <>
-                <li><Link to="/history">History</Link></li>
+                <li><Link to="/dashboard">Dashboard</Link></li>
                 <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
             </>
         )
@@ -62,7 +62,7 @@ function Header() {
                 {isAdmin && adminRouter()}
 
                 {
-                    isLogged ? loggedRouter() : <li><Link to="/login">Login ✥ Register</Link></li>
+                    isLogged ? loggedRouter() : <li><Link to="/login">Login / Register</Link></li>
                 }
 
                 <li onClick={() => setMenu(!menu)}>
