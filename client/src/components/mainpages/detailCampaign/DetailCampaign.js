@@ -32,12 +32,14 @@ function DetailCampaign() {
                         <h6>#id: {detailCampaign.campaign_id}</h6>
                     </div>
                     <span>$ {detailCampaign.price}</span>
+                    <p>{detailCampaign.phone_number}</p>
                     <p>{detailCampaign.description}</p>
                     <p>{detailCampaign.content}</p>
+    
                     <p>Sold: {detailCampaign.sold}</p>
                     <Link to="/cart" className="cart"
                     onClick={() => addCart(detailCampaign)}>
-                        Buy Now
+                        Donate Now
                     </Link>
                 </div>
             </div>

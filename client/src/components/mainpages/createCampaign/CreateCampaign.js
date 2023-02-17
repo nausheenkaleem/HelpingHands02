@@ -8,6 +8,7 @@ const initialState = {
     campaign_id: '',
     title: '',
     price: 0,
+    phone_number:'0',
     description: 'Add a description for your campaign',
     content: 'Enter all the details regarding your case',
     category: '',
@@ -153,6 +154,12 @@ function CreateCampaign() {
                     <label htmlFor="price">Price</label>
                     <input type="number" name="price" id="price" required
                     value={campaign.price} onChange={handleChangeInput} />
+                </div>
+
+                <div className="row">
+                    <label htmlFor="price">Phone Number</label>
+                    <input type="tel" name="phone_number" id="phone_number" required
+                    value={campaign.phone_number} onChange={handleChangeInput} />
                 </div>
 
                 <div className="row">

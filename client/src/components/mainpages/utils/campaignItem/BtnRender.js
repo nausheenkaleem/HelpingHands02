@@ -23,7 +23,7 @@ function BtnRender({campaign, deleteCampaign}) {
                 </>
                 : <>
                     <Link id="btn_buy" to="#!" onClick={() => addCart(campaign)}>
-                        Buy
+                        Donate
                     </Link>
                     <Link id="btn_view" to={`/detail/${campaign._id}`}>
                         View

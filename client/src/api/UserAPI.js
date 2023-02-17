@@ -33,7 +33,7 @@ function UserAPI(token) {
     
 
     const addCart = async (campaign) => {
-        if(!isLogged) return alert("Please login to continue buying")
+        if(!isLogged) return alert("Please login to continue donating")
 
         const check = cart.every(item =>{
             return item._id !== campaign._id
