@@ -3,6 +3,9 @@
 
 the variables have already been created yall just need to edit the .env file, thanks
 
+**To run client and server concurrently <br />
+**npm run dev
+
 **To connect mongo**  <br />
 Create a db in mongodb atlas  <br />
 Copy the connection string and paste in .env file <br />
