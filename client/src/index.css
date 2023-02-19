@@ -44,7 +44,12 @@ button{
 @import url("./components/mainpages/detailCampaign/detailCampaign.css");
 
 /* ------------- Login/Register ----------------- */
-@import url("./components/mainpages/auth/login.css");
+
+@import url("./components/mainpages/auth/donorLogin.css");
+
+/* ------------- Donee Login ----------------- */
+
+@import url("./components/mainpages/auth/doneeLogin.css");
 
 /* ------------ Cart ------------------- */
 @import url("./components/mainpages/cart/cart.css");
@@ -123,7 +128,10 @@ button{
     min-width: 290px;
     margin: 5px 0;
   }
-  .login-page{
+  .donor-login-page{
+    padding: 30px 15px;
+  }
+  .donee-login-page{
     padding: 30px 15px;
   }
   .delete-all{

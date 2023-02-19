@@ -26,7 +26,7 @@ function Login() {
     }
 
     return (
-        <div className="login-page">
+        <div className="donor-login-page">
             <form onSubmit={loginSubmit}>
                 <h2>Login</h2>
                 <input type="email" name="email" required
@@ -37,11 +37,14 @@ function Login() {
 
                 <div className="row">
                     <button type="submit">Login</button>
-                    <Link to="/donorRegister">Register</Link>
+                    <Link to="/doneeRegister">Register</Link>
                 </div>
             </form>
         </div>
+      
+        
     )
+    
 }
 
 export default Login

@@ -4,6 +4,7 @@ import Campaigns from './campaigns/Campaigns'
 import DetailCampaign from './detailCampaign/DetailCampaign'
 import Login from './auth/Login'
 import DonorRegister from './auth/DonorRegister'
+import DoneeRegister from './auth/DoneeRegister'
 import OrderHistory from './dashboard/OrderHistory'
 import OrderDetails from './dashboard/OrderDetails'
 import Cart from './cart/Cart'
@@ -27,6 +28,7 @@ function Pages() {
 
             <Route path="/login" exact component={isLogged ? NotFound : Login} />
             <Route path="/donorRegister" exact component={isLogged ? NotFound : DonorRegister} />
+            <Route path="/doneeRegister" exact component={isLogged ? NotFound : DoneeRegister} />
 
             <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
             <Route path="/create_campaign" exact component={isAdmin ? CreateCampaign : NotFound} />

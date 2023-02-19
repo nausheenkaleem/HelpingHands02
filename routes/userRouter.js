@@ -3,6 +3,7 @@ const userCtrl = require('../controllers/userCtrl')
 const auth = require('../middleware/auth')
 
 router.post('/donorRegister', userCtrl.donorRegister)
+router.post('/doneeRegister', userCtrl.doneeRegister)
 
 router.post('/login', userCtrl.login)
 

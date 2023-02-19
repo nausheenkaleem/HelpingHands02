@@ -27,7 +27,7 @@ function DonorRegister() {
     }
 
     return (
-        <div className="login-page">
+        <div className="donor-login-page">
             <form onSubmit={registerSubmit}>
                 <h2>Register</h2>
                 <input type="text" name="name" required
@@ -41,7 +41,7 @@ function DonorRegister() {
 
                 <div className="row">
                     <button type="submit">Register</button>
-                    <Link to="/login">Login</Link>
+                    <Link to="/donorLogin">Login</Link>
                 </div>
             </form>
         </div>
