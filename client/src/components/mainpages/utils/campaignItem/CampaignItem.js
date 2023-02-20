@@ -1,12 +1,12 @@
 import React from 'react'
 import BtnRender from './BtnRender'
 
-function CampaignItem({campaign, isAdmin, deleteCampaign, handleCheck}) {
+function CampaignItem({campaign, isAdmin, deleteCampaign, handleCheck, isDonee}) {
 
     return (
         <div className="campaign_card">
             {
-                isAdmin && <input type="checkbox" checked={campaign.checked}
+                isDonee || isAdmin && <input type="checkbox" checked={campaign.checked}
                 onChange={() => handleCheck(campaign._id)} />
             }
             <img src={campaign.images.url} alt="" />

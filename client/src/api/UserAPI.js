@@ -4,6 +4,7 @@ import axios from 'axios'
 function UserAPI(token) {
     const [isLogged, setIsLogged] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
+    const [isDonee, setIsDonee] = useState(false)
     const [cart, setCart] = useState([])
     const [dashboard, setDashboard] = useState([])
 
@@ -30,8 +31,6 @@ function UserAPI(token) {
         }
     },[token])
 
-    
-
     const addCart = async (campaign) => {
         if(!isLogged) return alert("Please login to continue donating")
 
@@ -54,6 +53,7 @@ function UserAPI(token) {
     return {
         isLogged: [isLogged, setIsLogged],
         isAdmin: [isAdmin, setIsAdmin],
+        isDonee: [isDonee, setIsDonee],
         cart: [cart, setCart],
         addCart: addCart,
         dashboard: [dashboard, setDashboard]

@@ -18,6 +18,8 @@ import {GlobalState} from '../../GlobalState'
 function Pages() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
+    const [isDonee] = state.userAPI.isDonee
+
     const [isAdmin] = state.userAPI.isAdmin
 
 
@@ -28,12 +30,14 @@ function Pages() {
 
             <Route path="/login" exact component={isLogged ? NotFound : Login} />
             <Route path="/donorRegister" exact component={isLogged ? NotFound : DonorRegister} />
-            <Route path="/doneeRegister" exact component={isLogged ? NotFound : DoneeRegister} />
+            <Route path="/doneeRegister" exact component={isLogged ? isDonee : DoneeRegister} />
 
             <Route path="/category" exact component={isAdmin ? Categories : NotFound} />
             <Route path="/create_campaign" exact component={isAdmin ? CreateCampaign : NotFound} />
-            <Route path="/edit_campaign/:id" exact component={isAdmin ? CreateCampaign : NotFound} />
+            <Route path="/create_campaign" exact component={isDonee ? CreateCampaign : NotFound} />
 
+            <Route path="/edit_campaign/:id" exact component={isAdmin ? CreateCampaign : NotFound} />
+            
             <Route path="/dashboard" exact component={isLogged ? OrderHistory : NotFound} />
             <Route path="/dashboard/:id" exact component={isLogged ? OrderDetails : NotFound} />
 

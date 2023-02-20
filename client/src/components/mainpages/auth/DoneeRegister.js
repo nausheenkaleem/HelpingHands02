@@ -47,7 +47,7 @@ return (
 
             <div className="row">
                 <button type="submit">Register</button>
-                <Link to="/doneeLogin">Login</Link>
+                <Link to="/login">Login</Link>
             </div>
         </form>
     </div>

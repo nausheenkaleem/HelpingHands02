@@ -41,7 +41,7 @@ function DonorRegister() {
 
                 <div className="row">
                     <button type="submit">Register</button>
-                    <Link to="/donorLogin">Login</Link>
+                    <Link to="/login">Login</Link>
                 </div>
             </form>
         </div>

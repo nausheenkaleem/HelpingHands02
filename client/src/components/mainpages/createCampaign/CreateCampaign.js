@@ -21,6 +21,8 @@ function CreateCampaign() {
     const [categories] = state.categoriesAPI.categories
     const [images, setImages] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [isDonee] = state.userAPI.isDonee
+
 
 
     const [isAdmin] = state.userAPI.isAdmin
@@ -52,7 +54,7 @@ function CreateCampaign() {
     const handleUpload = async e =>{
         e.preventDefault()
         try {
-            if(!isAdmin) return alert("You're not an admin")
+            if(!isAdmin || !isDonee) return alert("You're not an admin")
             const file = e.target.files[0]
             
             if(!file) return alert("File not exist.")
@@ -100,7 +102,7 @@ function CreateCampaign() {
     const handleSubmit = async e =>{
         e.preventDefault()
         try {
-            if(!isAdmin) return alert("You're not an admin")
+            if(!isAdmin || !isDonee) return alert("You're not an admin")
             if(!images) return alert("No Image Upload")
 
             if(onEdit){
