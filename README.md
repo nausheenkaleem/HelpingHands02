@@ -1,8 +1,10 @@
-# HelpingHands02
+## Greetings
 2nd repository since the first one faced trouble pushing commits. For now this repository consists of auth module and APIS and a general interface for all our features. <br />
 
-the variables have already been created yall just need to edit the .env file, thanks
-
+Install node modules
+```bash
+npm install
+```
 **To run client and server concurrently** <br />
 npm run dev
 
