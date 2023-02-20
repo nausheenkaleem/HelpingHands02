@@ -5,13 +5,17 @@ Install node modules
 ```bash
 npm install
 ```
-**To run client and server concurrently** <br />
+##To run client and server concurrently <br />
+```bash
 npm run dev
+```bash
 
-**To connect mongo**  <br />
+## To connect mongo  <br />
 Create a db in mongodb atlas  <br />
 Copy the connection string and paste in .env file <br />
 
-**To connect to cloudinary** <br />
+## To connect to cloudinary <br />
 go to https://cloudinary.com/  <br />
 Create an account and paste your credentials in .env file <br />
+
+Thanks
