@@ -5,10 +5,10 @@ Install node modules
 ```bash
 npm install
 ```
-##To run client and server concurrently <br />
+## To run client and server concurrently <br />
 ```bash
 npm run dev
-```bash
+```
 
 ## To connect mongo  <br />
 Create a db in mongodb atlas  <br />
