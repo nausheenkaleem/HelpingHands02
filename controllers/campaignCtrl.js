@@ -65,7 +65,7 @@ const campaignCtrl = {
     },
     createCampaign: async(req, res) =>{
         try {
-            const {campaign_id, title, price, phone_number, description, content, images, category} = req.body;
+            const {campaign_id, title, amount_req, phone_number, description, content, images, category} = req.body;
             if(!images) return res.status(400).json({msg: "No image upload"})
 
             const campaign = await Campaigns.findOne({campaign_id})
@@ -73,7 +73,7 @@ const campaignCtrl = {
                 return res.status(400).json({msg: "This campaign already exists."})
 
             const newCampaign = new Campaigns({
-                campaign_id, title: title.toLowerCase(), price, phone_number, description, content, images, category
+                campaign_id, title: title.toLowerCase(), amount_req, phone_number, description, content, images, category
             })
 
             await newCampaign.save()
@@ -93,11 +93,11 @@ const campaignCtrl = {
     },
     updateCampaign: async(req, res) =>{
         try {
-            const {title, price, phone_number, description, content, images, category} = req.body;
+            const {title, amount_req, phone_number, description, content, images, category} = req.body;
             if(!images) return res.status(400).json({msg: "No image upload"})
 
             await Campaigns.findOneAndUpdate({_id: req.params.id}, {
-                title: title.toLowerCase(), price, phone_number, description, content, images, category
+                title: title.toLowerCase(), amount_req, phone_number, description, content, images, category
             })
 
             res.json({msg: "Updated a Campaign"})

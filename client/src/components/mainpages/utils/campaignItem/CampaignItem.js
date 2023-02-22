@@ -13,7 +13,7 @@ function CampaignItem({campaign, isAdmin, deleteCampaign, handleCheck, isDonee})
 
             <div className="campaign_box">
                 <h2 title={campaign.title}>{campaign.title}</h2>
-                <span>${campaign.price}</span>
+                <span>${campaign.amount_req}</span>
                 <p>{campaign.description}</p>
             </div>
 

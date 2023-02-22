@@ -10,8 +10,10 @@ function Header() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
     const [isAdmin] = state.userAPI.isAdmin
+    const [isDonee] = state.userAPI.isDonee
+
     const [cart] = state.userAPI.cart
-    const [menu, setMenu] = useState(false)
+    const [menu, setMenu] = useState(false)  
 
     const logoutUser = async () =>{
         await axios.get('/user/logout')
@@ -29,6 +31,7 @@ function Header() {
             </>
         )
     }
+
 
     const loggedRouter = () =>{
         return(
@@ -68,6 +71,9 @@ function Header() {
                 <li onClick={() => setMenu(!menu)}>
                     <img src={Close} alt="" width="30" className="menu" />
                 </li>
+                
+                
+            
 
             </ul>
 

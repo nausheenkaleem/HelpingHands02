@@ -13,7 +13,7 @@ const campaignSchema = new mongoose.Schema({
         trim: true,
         required: true
     },
-    price:{
+    amount_req:{
         type: Number,
         trim: true,
         required: true

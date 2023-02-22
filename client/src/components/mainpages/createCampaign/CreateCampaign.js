@@ -7,7 +7,7 @@ import {useHistory, useParams} from 'react-router-dom'
 const initialState = {
     campaign_id: '',
     title: '',
-    price: 0,
+    amount_req: 0,
     phone_number:'0',
     description: 'Add a description for your campaign',
     content: 'Enter all the details regarding your case',
@@ -54,7 +54,7 @@ function CreateCampaign() {
     const handleUpload = async e =>{
         e.preventDefault()
         try {
-            if(!isAdmin || !isDonee) return alert("You're not an admin")
+            if(!isAdmin) return alert("You're not an admin")
             const file = e.target.files[0]
             
             if(!file) return alert("File not exist.")
@@ -102,7 +102,7 @@ function CreateCampaign() {
     const handleSubmit = async e =>{
         e.preventDefault()
         try {
-            if(!isAdmin || !isDonee) return alert("You're not an admin")
+            if(!isAdmin) return alert("You're not an admin")
             if(!images) return alert("No Image Upload")
 
             if(onEdit){
@@ -153,13 +153,13 @@ function CreateCampaign() {
                 </div>
 
                 <div className="row">
-                    <label htmlFor="price">Price</label>
-                    <input type="number" name="price" id="price" required
-                    value={campaign.price} onChange={handleChangeInput} />
+                    <label htmlFor="amount">Amount Required</label>
+                    <input type="number" name="amount" id="amount" required
+                    value={campaign.amount_req} onChange={handleChangeInput} />
                 </div>
 
                 <div className="row">
-                    <label htmlFor="price">Phone Number</label>
+                    <label htmlFor="amount">Phone Number</label>
                     <input type="tel" name="phone_number" id="phone_number" required
                     value={campaign.phone_number} onChange={handleChangeInput} />
                 </div>

@@ -12,7 +12,7 @@ function Cart() {
     useEffect(() =>{
         const getTotal = () =>{
             const total = cart.reduce((prev, item) => {
-                return prev + (item.price * item.quantity)
+                return prev + (item.amount_req * item.quantity)
             },0)
 
             setTotal(total)
@@ -90,7 +90,7 @@ function Cart() {
                         <div className="box-detail">
                             <h2>{campaign.title}</h2>
 
-                            <h3>$ {campaign.price * campaign.quantity}</h3>
+                            <h3>$ {campaign.amount_req * campaign.quantity}</h3>
                             <p>{campaign.description}</p>
                             <p>{campaign.content}</p>
 

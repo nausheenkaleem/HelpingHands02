@@ -31,7 +31,7 @@ function DetailCampaign() {
                         <h2>{detailCampaign.title}</h2>
                         <h6>#id: {detailCampaign.campaign_id}</h6>
                     </div>
-                    <span>$ {detailCampaign.price}</span>
+                    <span>$ {detailCampaign.amount_req}</span>
                     <p>{detailCampaign.phone_number}</p>
                     <p>{detailCampaign.description}</p>
                     <p>{detailCampaign.content}</p>

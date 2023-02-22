@@ -47,7 +47,7 @@ function OrderDetails() {
                         <th></th>
                         <th>Campaigns</th>
                         <th>Quantity</th>
-                        <th>Price</th>
+                        <th>Amount Required</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,7 +57,7 @@ function OrderDetails() {
                             <td><img src={item.images.url} alt="" /></td>
                             <td>{item.title}</td>
                             <td>{item.quantity}</td>
-                            <td>$ {item.price * item.quantity}</td>
+                            <td>$ {item.amount_req * item.quantity}</td>
                         </tr>
                         ))
                     }
