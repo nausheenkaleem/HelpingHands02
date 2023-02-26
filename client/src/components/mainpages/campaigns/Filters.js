@@ -40,8 +40,8 @@ function Filters() {
                     <option value=''>Newest</option>
                     <option value='sort=oldest'>Oldest</option>
                     <option value='sort=-sold'>Best sales</option>
-                    <option value='sort=-price'>Price: Hight-Low</option>
-                    <option value='sort=price'>Price: Low-Hight</option>
+                    <option value='sort=-amount_req'>Amount: Hight-Low</option>
+                    <option value='sort=amount_req'>Amount: Low-Hight</option>
                 </select>
             </div>
         </div>

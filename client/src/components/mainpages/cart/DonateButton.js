@@ -1,17 +1,16 @@
 import React from 'react';
-import PaypalExpressBtn from 'react-paypal-express-checkout';
+// import PaypalExpressBtn from 'react-paypal-express-checkout';
+import StripeCheckout from 'react-stripe-checkout'
  
 export default class DonateButton extends React.Component {
     render() {
         const onSuccess = (payment) => {
-            // Congratulation, it came here means everything's fine!
             		console.log("The payment was succeeded!", payment);
                     // You can bind the "payment" object's value to your state or props or whatever here, please see below for sample returned data
                     this.props.tranSuccess(payment)
         }
  
         const onCancel = (data) => {
-            // User pressed "cancel" or close Paypal's popup!
             console.log('The payment was cancelled!', data);
             // You can bind the "data" object's value to your state or props or whatever here, please see below for sample returned data
         }
@@ -38,7 +37,6 @@ export default class DonateButton extends React.Component {
         // For prodcytion app-ID:
         //   => https://developer.paypal.com/docs/classic/lifecycle/goingLive/
  
-        // NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!
         let style = {
             size: 'small',
             color: 'blue',
@@ -48,12 +46,13 @@ export default class DonateButton extends React.Component {
         }
 
         return (
-            <PaypalExpressBtn 
+            <StripeCheckout 
             env={env} client={client} 
             currency={currency} 
             total={total} onError={onError} 
             onSuccess={onSuccess} onCancel={onCancel}
-            style={style} />
+            style={style}
+            stripeKey='pk_test_51McFcDD7yKPgI5WMU43O629G8qTASLpaWAXkAtD4B2JfukQjTInuHdTX7l1nUtULCd1RoLnjySmurjcbD6NXpbBX00Gpg5ggtr' />
         );
     }
 }

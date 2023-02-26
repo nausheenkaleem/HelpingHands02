@@ -21,7 +21,7 @@ function CreateCampaign() {
     const [categories] = state.categoriesAPI.categories
     const [images, setImages] = useState(false)
     const [loading, setLoading] = useState(false)
-    const [isDonee] = state.userAPI.isDonee
+    // const [isDonee] = state.userAPI.isDonee
 
 
 
@@ -153,13 +153,13 @@ function CreateCampaign() {
                 </div>
 
                 <div className="row">
-                    <label htmlFor="amount">Amount Required</label>
-                    <input type="number" name="amount" id="amount" required
+                    <label htmlFor="amount_req">Amount Required</label>
+                    <input type="number" name="amount_req" id="amount_req" required
                     value={campaign.amount_req} onChange={handleChangeInput} />
                 </div>
 
                 <div className="row">
-                    <label htmlFor="amount">Phone Number</label>
+                    <label htmlFor="phone">Phone Number</label>
                     <input type="tel" name="phone_number" id="phone_number" required
                     value={campaign.phone_number} onChange={handleChangeInput} />
                 </div>

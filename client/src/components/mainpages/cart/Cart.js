@@ -90,7 +90,7 @@ function Cart() {
                         <div className="box-detail">
                             <h2>{campaign.title}</h2>
 
-                            <h3>$ {campaign.amount_req * campaign.quantity}</h3>
+                            <h3>Rs. {campaign.amount_req * campaign.quantity}</h3>
                             <p>{campaign.description}</p>
                             <p>{campaign.content}</p>
 
@@ -110,7 +110,7 @@ function Cart() {
             }
 
             <div className="total">
-                <h3>Total: $ {total}</h3>
+                <h3>Total: {total} Rs.</h3>
                 <DonateButton
                 total={total}
                 tranSuccess={tranSuccess} />
