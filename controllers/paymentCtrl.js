@@ -31,7 +31,7 @@ const paymentCtrl = {
 
             
             await newPayment.save()
-            res.json({msg: "Payment Success!"})
+            res.json({msg: "Payment Succes!"})
             
         } catch (err) {
             return res.status(500).json({msg: err.message})

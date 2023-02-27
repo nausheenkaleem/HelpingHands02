@@ -56,7 +56,9 @@ function Campaigns() {
         })
     }
 
-    if(loading) return <div><Loading /></div>
+    if(campaigns.length === 0) 
+    return <h2 style={{textAlign: "center", fontSize: "2re"}}>No Campaigns Found</h2> 
+
     return (
         <>
         <Filters />
