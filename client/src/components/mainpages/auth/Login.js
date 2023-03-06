@@ -37,7 +37,7 @@ function Login() {
 
                 <div className="row">
                     <button type="submit">Login</button>
-                    <Link to="/doneeRegister">Register</Link>
+                    <Link to="/donorRegister">Register</Link>
                 </div>
             </form>
         </div>

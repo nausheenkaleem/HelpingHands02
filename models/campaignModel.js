@@ -43,7 +43,7 @@ const campaignSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    sold:{
+    donated:{
         type: Number,
         default: 0
     }

@@ -29,28 +29,6 @@ function Cart() {
     }
 
 
-    const increment = (id) =>{
-        cart.forEach(item => {
-            if(item._id === id){
-                item.quantity += 1
-            }
-        })
-
-        setCart([...cart])
-        addToCart(cart)
-    }
-
-    const decrement = (id) =>{
-        cart.forEach(item => {
-            if(item._id === id){
-                item.quantity === 1 ? item.quantity = 1 : item.quantity -= 1
-            }
-        })
-
-        setCart([...cart])
-        addToCart(cart)
-    }
-
     const removeCampaign = id =>{
         if(window.confirm("Do you want to delete this campaign?")){
             cart.forEach((item, index) => {
@@ -94,12 +72,6 @@ function Cart() {
                             <p>{campaign.description}</p>
                             <p>{campaign.content}</p>
 
-                            <div className="amount">
-                                <button onClick={() => decrement(campaign._id)}> - </button>
-                                <span>{campaign.quantity}</span>
-                                <button onClick={() => increment(campaign._id)}> + </button>
-                            </div>
-                            
                             <div className="delete" 
                             onClick={() => removeCampaign(campaign._id)}>
                                 X
@@ -110,10 +82,8 @@ function Cart() {
             }
 
             <div className="total">
-                <h3>Total: {total} Rs.</h3>
-                <DonateButton
-                total={total}
-                tranSuccess={tranSuccess} />
+                <h3>Required Total: {total} Rs.</h3>
+                <DonateButton/>
             </div>
         </div>
     )

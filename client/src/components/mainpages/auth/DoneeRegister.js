@@ -42,7 +42,7 @@ return (
             placeholder="Address" value={user.address} onChange={onChangeInput} />
 
             <input type="phone" name="phone" required autoComplete="on"
-            placeholder="Phone Number" value={user.phone} onChange={onChangeInput} />
+            placeholder="Phone Number" value={user.phone} onChange={onChangeInput} maxLength="11" />
 
 
             <div className="row">

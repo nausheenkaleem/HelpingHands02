@@ -36,7 +36,7 @@ function DetailCampaign() {
                     <p>{detailCampaign.description}</p>
                     <p>{detailCampaign.content}</p>
     
-                    <p>Sold: {detailCampaign.sold}</p>
+                    <p>Donations Received: {detailCampaign.donated}</p>
                     <Link to="/cart" className="cart"
                     onClick={() => addCart(detailCampaign)}>
                         Donate Now
