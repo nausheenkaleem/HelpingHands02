@@ -5,10 +5,25 @@ const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const cookieParser = require('cookie-parser')
 const path = require('path')
-
-
-
 const app = express()
+ 
+var Publishable_Key = process.env.Publishable_Key
+var Secret_Key = process.env.Secret_Key
+
+
+
+
+// View Engine Setup 
+app.set('views', path.join(__dirname, 'views')) 
+app.set('view engine', 'ejs') 
+
+app.get('/', function(req, res){ 
+	res.render('Home', { 
+	key: Publishable_Key 
+	}) 
+}) 
+
+
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
@@ -21,8 +36,6 @@ app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/categoryRouter'))
 app.use('/api', require('./routes/upload'))
 app.use('/api', require('./routes/campaignRouter'))
-app.use('/api', require('./routes/paymentRouter'))
-
 
 
 // Connect to mongodb
