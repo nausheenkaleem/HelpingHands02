@@ -8,14 +8,12 @@ const path = require('path')
 const app = express()
  
 var Publishable_Key = process.env.Publishable_Key
-var Secret_Key = process.env.Secret_Key
-
+const stripe = require('stripe')('sk_test_51McFcDD7yKPgI5WMnFixSWhOnjuw6eNHgJWgINVlNlyuqeEkIo7NZvFXHvfJaSeP3OK06BKLQAXLzMydu0l3fNTi00rdfKHvYS')
 
 
 
 // View Engine Setup 
 app.set('views', path.join(__dirname, 'views')) 
-app.set('view engine', 'ejs') 
 
 app.get('/', function(req, res){ 
 	res.render('Home', { 
@@ -32,6 +30,15 @@ app.use(fileUpload({
 }))
 
 // Routes
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get("*", function ( _, res){
+    res.sendFile(
+        path.join(__dirname, "./client/build/index.html"),
+        function (err) {
+            res.status(500).send(err);
+        }
+    )
+});
 app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/categoryRouter'))
 app.use('/api', require('./routes/upload'))
