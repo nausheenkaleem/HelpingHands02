@@ -35,7 +35,6 @@
     "ejs": "1.0.0",
     "react-stripe-checkout": "^2.6.3",
     "save": "^2.9.0",
-    "build": "node ./buildScript",
     "stripe": "^11.12.0"
 
   },

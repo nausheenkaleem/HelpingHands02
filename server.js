@@ -16,7 +16,11 @@ const stripe = require('stripe')('sk_test_51McFcDD7yKPgI5WMnFixSWhOnjuw6eNHgJWgI
 app.set('views', path.join(__dirname, 'views')) 
 app.set('view engine', 'ejs') 
 
-
+app.get('/', function(req, res){ 
+	res.render('Home', { 
+	key: Publishable_Key 
+	}) 
+}) 
 
 
 app.use(express.json())
@@ -27,15 +31,6 @@ app.use(fileUpload({
 }))
 
 // Routes
-app.use(express.static(path.join(__dirname, "./client/build")));
-app.get("*", function ( _, res){
-    res.sendFile(
-        path.join(__dirname, "./client/build/index.html"),
-        function (err) {
-            res.status(500).send(err);
-        }
-    )
-});
 app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/categoryRouter'))
 app.use('/api', require('./routes/upload'))
@@ -61,13 +56,11 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
-connectDB().then(() => {
-    app.listen(PORT, () => {
-        console.log("listening for requests");
-    })
-})
 
 const PORT = process.env.PORT || 5000
-app.listen(PORT, () =>{
-    console.log('Server is running on port', PORT)
+mongoose.connect().then(()=> {
+    app.listen(PORT, () =>{
+        console.log('Server is running on port', PORT)
+})
+
 })
