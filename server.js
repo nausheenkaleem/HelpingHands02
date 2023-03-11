@@ -16,7 +16,11 @@ const stripe = require('stripe')('sk_test_51McFcDD7yKPgI5WMnFixSWhOnjuw6eNHgJWgI
 app.set('views', path.join(__dirname, 'views')) 
 app.set('view engine', 'ejs') 
 
-
+app.get('/', function(req, res){ 
+	res.render('Home', { 
+	key: Publishable_Key 
+	}) 
+}) 
 
 
 app.use(express.json())
