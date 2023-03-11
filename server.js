@@ -5,6 +5,9 @@ const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const cookieParser = require('cookie-parser')
 const path = require('path')
+const serverless = require('serverless-http');
+module.exports.handler = serverless(app);
+app.set('views', './views');
 const app = express()
  
 var Publishable_Key = process.env.Publishable_Key
