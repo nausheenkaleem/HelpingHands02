@@ -57,7 +57,7 @@ function CreateCampaign() {
             
             if(!file) return alert("File not exist.")
 
-            if(file.size > 1024 * 1024) // 1mb
+            if(file.size > 1240 * 1240) // 1mb
                 return alert("Size too large!")
 
             if(file.type !== 'image/jpeg' && file.type !== 'image/png') 
