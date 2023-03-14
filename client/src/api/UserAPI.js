@@ -5,6 +5,7 @@ function UserAPI(token) {
     const [isLogged, setIsLogged] = useState(false)
     const [isAdmin, setIsAdmin] = useState(false)
     const [isDonee, setIsDonee] = useState(false)
+    const [isDonor, setIsDonor] = useState(false)
     const [cart, setCart] = useState([])
     const [dashboard, setDashboard] = useState([])
 
@@ -54,6 +55,7 @@ function UserAPI(token) {
         isLogged: [isLogged, setIsLogged],
         isAdmin: [isAdmin, setIsAdmin],
         isDonee: [isDonee, setIsDonee],
+        isDonor: [isDonor, setIsDonor],
         cart: [cart, setCart],
         addCart: addCart,
         dashboard: [dashboard, setDashboard]

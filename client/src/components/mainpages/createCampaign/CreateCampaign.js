@@ -23,8 +23,6 @@ function CreateCampaign() {
     const [loading, setLoading] = useState(false)
     // const [isDonee] = state.userAPI.isDonee
 
-
-
     const [isAdmin] = state.userAPI.isAdmin
     const [token] = state.token
 
@@ -54,7 +52,7 @@ function CreateCampaign() {
     const handleUpload = async e =>{
         e.preventDefault()
         try {
-            if(!isAdmin) return alert("You're not an admin")
+            if(!isAdmin ) return alert("You're not an admin")
             const file = e.target.files[0]
             
             if(!file) return alert("File not exist.")
@@ -143,7 +141,7 @@ function CreateCampaign() {
                 <div className="row">
                     <label htmlFor="campaign_id">Campaign ID</label>
                     <input type="text" name="campaign_id" id="campaign_id" required
-                    value={campaign.campaign_id} onChange={handleChangeInput} disabled={onEdit} />
+                    value={campaign.campaign_id} onChange={handleChangeInput} disabled={onEdit} maxLength="6"/>
                 </div>
 
                 <div className="row">
@@ -161,7 +159,7 @@ function CreateCampaign() {
                 <div className="row">
                     <label htmlFor="phone">Phone Number</label>
                     <input type="tel" name="phone_number" id="phone_number" required
-                    value={campaign.phone_number} onChange={handleChangeInput} />
+                    value={campaign.phone_number} onChange={handleChangeInput} maxLength="11"/>
                 </div>
 
                 <div className="row">
