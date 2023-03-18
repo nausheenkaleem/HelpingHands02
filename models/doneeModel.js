@@ -15,6 +15,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    address: {
+        type: String,
+    },
+    phone: {
+        type: String,
+    },
     role: {
         type: Number,
         default: 0
@@ -27,4 +33,4 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 })
 
-module.exports = mongoose.model('Users', userSchema)
+module.exports = mongoose.model('Donees', userSchema)
