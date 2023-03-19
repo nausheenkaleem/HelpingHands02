@@ -13,7 +13,7 @@ function BtnRender({campaign, deleteCampaign}) {
             {
                 isAdmin ? 
                 <>
-                    <Link id="btn_buy" to="#!" 
+                    <Link id="btn_donate" to="#!" 
                     onClick={() =>deleteCampaign(campaign._id, campaign.images.public_id)}>
                         Delete
                     </Link>
@@ -22,7 +22,7 @@ function BtnRender({campaign, deleteCampaign}) {
                     </Link>
                 </>
                 : <>
-                    <Link id="btn_buy" to="#!" onClick={() => addCart(campaign)}>
+                    <Link id="btn_donate" to="#!" onClick={() => addCart(campaign)}>
                         Donate
                     </Link>
                     <Link id="btn_view" to={`/detail/${campaign._id}`}>
