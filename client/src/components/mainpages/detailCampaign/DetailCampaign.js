@@ -37,10 +37,15 @@ function DetailCampaign() {
                     <p>{detailCampaign.content}</p>
     
                     <p>Donations Received: {detailCampaign.donated}</p>
-                    <Link to="/cart" className="cart"
+                    {/* <Link to="/cart" className="cart"
                     onClick={() => addCart(detailCampaign)}>
                         Donate Now
-                    </Link>
+                    </Link> */}
+                    <div className="total">
+            <a href="https://donate.stripe.com/test_bIY28J18j8Fg9SU148">
+              <button>Donate Now</button>
+            </a>
+          </div>      
                 </div>
             </div>
 

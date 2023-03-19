@@ -4,12 +4,12 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const fileUpload = require('express-fileupload')
 const cookieParser = require('cookie-parser')
+const bodyParser = require("body-parser")
 const path = require('path')
 const app = express()
  
-var Publishable_Key = process.env.Publishable_Key
-const stripe = require('stripe')('sk_test_51McFcDD7yKPgI5WMnFixSWhOnjuw6eNHgJWgINVlNlyuqeEkIo7NZvFXHvfJaSeP3OK06BKLQAXLzMydu0l3fNTi00rdfKHvYS')
 
+const stripe = require('stripe')('sk_test_51McFcDD7yKPgI5WMnFixSWhOnjuw6eNHgJWgINVlNlyuqeEkIo7NZvFXHvfJaSeP3OK06BKLQAXLzMydu0l3fNTi00rdfKHvYS');
 
 
 // View Engine Setup 
@@ -22,7 +22,8 @@ app.get('/', function(req, res){
 	}) 
 }) 
 
-
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors())
