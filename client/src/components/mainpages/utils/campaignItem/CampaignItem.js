@@ -1,5 +1,6 @@
 import React from 'react'
 import BtnRender from './BtnRender'
+import ProgressBar from './progressBar'
 
 function CampaignItem({campaign, isAdmin, deleteCampaign, handleCheck, isDonee}) {
 
@@ -13,7 +14,8 @@ function CampaignItem({campaign, isAdmin, deleteCampaign, handleCheck, isDonee})
 
             <div className="campaign_box">
                 <h2 title={campaign.title}>{campaign.title}</h2>
-                <span>Rs.{campaign.amount_req}</span>
+                {/* <span>Rs.{campaign.amount_req}</span> */}
+                <ProgressBar bgcolor="teal" progress='30'   />
                 <p>{campaign.description}</p>
             </div>
 
