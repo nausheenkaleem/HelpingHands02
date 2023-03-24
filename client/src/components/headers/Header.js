@@ -60,7 +60,7 @@ function Header() {
             </div>
 
             <ul style={styleMenu}>
-                <li><Link to="/">{isAdmin ? 'Campaigns' : 'BROWSE'}</Link></li>
+                <li><Link to="/campaigns">{isAdmin ? 'Campaigns' : 'BROWSE'}</Link></li>
 
                 {isAdmin && adminRouter()}
 

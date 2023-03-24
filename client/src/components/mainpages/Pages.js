@@ -11,6 +11,7 @@ import Cart from './cart/Cart'
 import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateCampaign from './createCampaign/CreateCampaign'
+import Home from './home/Home'
 
 import {GlobalState} from '../../GlobalState'
 
@@ -25,7 +26,9 @@ function Pages() {
 
     return (
         <Switch>
-            <Route path="/" exact component={Campaigns} />
+            <Route path="/" exact component={Home} />
+            <Route path="/campaigns" exact component={Campaigns} />
+
             <Route path="/detail/:id" exact component={DetailCampaign} />
 
             <Route path="/login" exact component={isLogged ? NotFound : Login} />
