@@ -11,8 +11,7 @@ import Cart from './cart/Cart'
 import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateCampaign from './createCampaign/CreateCampaign'
-import Home from './home/Home'
-
+import Home from './home/home'
 import {GlobalState} from '../../GlobalState'
 
 

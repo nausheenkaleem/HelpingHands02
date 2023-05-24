@@ -2,6 +2,8 @@ import React, {useContext, useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
 import {GlobalState} from '../../../GlobalState'
 import CampaignItem from '../utils/campaignItem/CampaignItem'
+// import StripeCheckout  from 'stripe'
+// import Axios from 'axios'
 
 
 function DetailCampaign() {
@@ -10,6 +12,20 @@ function DetailCampaign() {
     const [campaigns] = state.campaignsAPI.campaigns
     const addCart = state.userAPI.addCart
     const [detailCampaign, setDetailCampaign] = useState([])
+
+    // const handleToken = (totalAmount, token) => {
+    //     try {
+    //         Axios.post("http://localhost:5000/payment/pay", {
+    //             token: token.id,
+    //             amount: totalAmount
+    //         })
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+    // const tokenHandler = (token) => {
+    //     handleToken(100, token)
+    // }
 
     useEffect(() =>{
         if(params.id){
@@ -35,7 +51,7 @@ function DetailCampaign() {
                     <p>{detailCampaign.phone_number}</p>
                     <p>{detailCampaign.description}</p>
                     <p>{detailCampaign.content}</p>
-    
+
                     <p>Donations Received: {detailCampaign.donated}</p>
                     {/* <Link to="/cart" className="cart"
                     onClick={() => addCart(detailCampaign)}>
@@ -45,7 +61,10 @@ function DetailCampaign() {
             <a href="https://donate.stripe.com/test_bIY28J18j8Fg9SU148">
               <button>Donate Now</button>
             </a>
-          </div>      
+            {/* <StripeCheckout
+            stripeKey=""
+            token={tokenHandler}/> */}
+          </div>
                 </div>
             </div>
 
@@ -54,7 +73,7 @@ function DetailCampaign() {
                 <div className="campaigns">
                     {
                         campaigns.map(campaign => {
-                            return campaign.category === detailCampaign.category 
+                            return campaign.category === detailCampaign.category
                                 ? <CampaignItem key={campaign._id} campaign={campaign} /> : null
                         })
                     }

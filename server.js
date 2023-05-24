@@ -9,7 +9,6 @@ const path = require('path')
 const app = express()
  
 
-const stripe = require('stripe')('sk_test_51McFcDD7yKPgI5WMnFixSWhOnjuw6eNHgJWgINVlNlyuqeEkIo7NZvFXHvfJaSeP3OK06BKLQAXLzMydu0l3fNTi00rdfKHvYS');
 
 
 // View Engine Setup 
@@ -36,6 +35,8 @@ app.use('/user', require('./routes/userRouter'))
 app.use('/api', require('./routes/categoryRouter'))
 app.use('/api', require('./routes/upload'))
 app.use('/api', require('./routes/campaignRouter'))
+app.use('/payment', require('./routes/paymentRouter'))
+
 
 
 // Connect to mongodb

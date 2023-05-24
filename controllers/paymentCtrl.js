@@ -24,6 +24,7 @@ const paymentCtrl = {
             const newPayment = new Payments({
                 user_id: _id, name, email, cart, paymentID, address
             })
+            console.log(newPayment)
 
             cart.filter(item => {
                 return sold(item._id, item.quantity, item.sold)
