@@ -10,10 +10,6 @@ npm install
 npm run dev
 ```
 
-## To connect mongo  <br />
-Create a db in mongodb atlas  <br />
-Copy the connection string and paste in .env file <br />
-
 ## To connect to cloudinary <br />
 go to https://cloudinary.com/  <br />
 Create an account and paste your credentials in .env file <br />
