@@ -67,7 +67,7 @@ function CreateCampaign() {
             formData.append('file', file)
 
             setLoading(true)
-            const res = await axios.post('/api/upload', formData, {
+            const res = await axios.post(url+ '/api/upload', formData, {
                 headers: {'content-type': 'multipart/form-data', Authorization: token}
             })
             setLoading(false)
@@ -82,7 +82,7 @@ function CreateCampaign() {
         try {
             if(!isAdmin) return alert("You're not an admin")
             setLoading(true)
-            await axios.post('/api/destroy', {public_id: images.public_id}, {
+            await axios.post(url+ '/api/destroy', {public_id: images.public_id}, {
                 headers: {Authorization: token}
             })
             setLoading(false)
@@ -104,11 +104,11 @@ function CreateCampaign() {
             if(!images) return alert("No Image Upload")
 
             if(onEdit){
-                await axios.put(`/api/campaigns/${campaign._id}`, {...campaign, images}, {
+                await axios.put(url+`/api/campaigns/${campaign._id}`, {...campaign, images}, {
                     headers: {Authorization: token}
                 })
             }else{
-                await axios.post('/api/campaigns', {...campaign, images}, {
+                await axios.post(url+'/api/campaigns', {...campaign, images}, {
                     headers: {Authorization: token}
                 })
             }
