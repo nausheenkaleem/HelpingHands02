@@ -13,7 +13,7 @@ function CampaignsAPI() {
 
     useEffect(() =>{
         const getCampaigns = async () => {
-            const res = await axios.get(url+ `/api/campaigns?limit=${page*9}&${category}&${sort}&title[regex]=${search}`)
+            const res = await axios.get( `/api/campaigns?limit=${page*9}&${category}&${sort}&title[regex]=${search}`)
             setCampaigns(res.data.campaigns)
             setResult(res.data.result)
         }

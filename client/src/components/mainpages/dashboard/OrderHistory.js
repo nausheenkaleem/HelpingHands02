@@ -14,7 +14,7 @@ function OrderHistory() {
         if(token){
             const getDashboard = async() =>{
                 if(isAdmin){
-                    const res = await axios.get(url + '/api/payment', {
+                    const res = await axios.get('/api/payment', {
                         headers: {Authorization: token}
                     })
                     setDashboard(res.data)
