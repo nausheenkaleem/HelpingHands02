@@ -10,6 +10,7 @@ const campaignSchema = new mongoose.Schema({
     },
     title:{
         type: String,
+        
         trim: true,
         required: true
     },
