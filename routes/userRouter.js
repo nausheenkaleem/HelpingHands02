@@ -2,20 +2,20 @@ const router = require('express').Router()
 const userCtrl = require('../controllers/userCtrl')
 const auth = require('../middleware/auth')
 
-router.post('/donorRegister', userCtrl.donorRegister)
-router.post('/doneeRegister', userCtrl.doneeRegister)
+router.post(url+ '/donorRegister', userCtrl.donorRegister)
+router.post(url+ '/doneeRegister', userCtrl.doneeRegister)
 
-router.post('/login', userCtrl.login)
+router.post(url+ '/login', userCtrl.login)
 
-router.get('/logout', userCtrl.logout)
+router.get(url+ '/logout', userCtrl.logout)
 
-router.get('/refresh_token', userCtrl.refreshToken)
+router.get(url+ '/refresh_token', userCtrl.refreshToken)
 
-router.get('/infor', auth,  userCtrl.getUser)
+router.get(url+ '/infor', auth,  userCtrl.getUser)
 
-router.patch('/addcart', auth, userCtrl.addCart)
+router.patch(url+ '/addcart', auth, userCtrl.addCart)
 
-router.get('/dashboard', auth, userCtrl.dashboard)
+router.get(url+ '/dashboard', auth, userCtrl.dashboard)
 
 
 module.exports = router

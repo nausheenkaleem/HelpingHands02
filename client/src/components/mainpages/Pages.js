@@ -12,7 +12,10 @@ import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateCampaign from './createCampaign/CreateCampaign'
 import Home from './home/home'
+import Payment from './detailCampaign/Payment'
+
 import {GlobalState} from '../../GlobalState'
+
 
 
 function Pages() {
@@ -27,6 +30,7 @@ function Pages() {
         <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/campaigns" exact component={Campaigns} />
+            <Route path="/pay" element={<Payment />} />
 
             <Route path="/detail/:id" exact component={DetailCampaign} />
 

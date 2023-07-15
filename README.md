@@ -1,18 +1,19 @@
 ## Greetings
-2nd repository since the first one faced trouble pushing commits. For now this repository consists of auth module and APIS and a general interface for all our features. <br />
+ <br />
 
-Install node modules
+Install node modules in root folder
 ```bash
+npm install
+```
+Install node modules in client folder
+```bash
+cd client
 npm install
 ```
 ## To run client and server concurrently <br />
 ```bash
 npm run dev
 ```
-
-## To connect mongo  <br />
-Create a db in mongodb atlas  <br />
-Copy the connection string and paste in .env file <br />
 
 ## To connect to cloudinary <br />
 go to https://cloudinary.com/  <br />

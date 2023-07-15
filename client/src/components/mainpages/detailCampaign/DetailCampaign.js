@@ -2,8 +2,6 @@ import React, {useContext, useState, useEffect} from 'react'
 import {useParams, Link} from 'react-router-dom'
 import {GlobalState} from '../../../GlobalState'
 import CampaignItem from '../utils/campaignItem/CampaignItem'
-// import StripeCheckout  from 'stripe'
-// import Axios from 'axios'
 
 
 function DetailCampaign() {
@@ -60,11 +58,11 @@ function DetailCampaign() {
                     <div className="total">
             <a href="https://donate.stripe.com/test_bIY28J18j8Fg9SU148">
               <button>Donate Now</button>
-            </a>
+            </a> 
             {/* <StripeCheckout
             stripeKey=""
             token={tokenHandler}/> */}
-          </div>
+          </div> 
                 </div>
             </div>
 

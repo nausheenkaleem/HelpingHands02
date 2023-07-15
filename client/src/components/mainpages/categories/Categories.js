@@ -20,7 +20,7 @@ function Categories() {
                 })
                 alert(res.data.msg)
             }else{
-                const res = await axios.post('/api/category', {name: category}, {
+                const res = await axios.post( '/api/category', {name: category}, {
                     headers: {Authorization: token}
                 })
                 alert(res.data.msg)
@@ -42,7 +42,7 @@ function Categories() {
 
     const deleteCategory = async id =>{
         try {
-            const res = await axios.delete(`/api/category/${id}`, {
+            const res = await axios.delete( `/api/category/${id}`, {
                 headers: {Authorization: token}
             })
             alert(res.data.msg)
